@@ -10,12 +10,12 @@ class Config():
 	##nano /etc/privoxy/config
 	#add to end of file these three lines:
 	##forward-socks5 / localhost:9050 .
-    ##forward-socks4 / localhost:9050 .
-    ##forward-socks4a / localhost:9050 .
-    #start services:
-    ##service tor start
-    ##service privoxy start
-    #use proxy on localhost:8118
+	##forward-socks4 / localhost:9050 .
+	##forward-socks4a / localhost:9050 .
+	#start services:
+	##service tor start
+	##service privoxy start
+	#use proxy on localhost:8118
 	PROXIES = {
         "http": "localhost:8118",
         "https": "localhost:8118",
