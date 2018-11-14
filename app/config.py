@@ -4,6 +4,10 @@ class Config():
 	#in shell type: export TELTOKEN=past_you_bot_token_here
 	TOKEN = os.environ.get('TELTOKEN')
 	URL = "https://api.telegram.org/bot" + TOKEN + "/"
+	#requests.get timeout
+	#requests.get offset
+	TIMEOUT = 100
+	OFFSET = None
 	#for proxying requests to the api, you can configure TOR+privoxy:
 	#on ubuntu 16.04:
 	##apt-get install tor privoxy
@@ -20,4 +24,3 @@ class Config():
         "http": "localhost:8118",
         "https": "localhost:8118",
     }
-

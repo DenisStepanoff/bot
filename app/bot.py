@@ -10,7 +10,8 @@ class Tbot:
 		return print(Config.URL)
 	#get all available updates
 	def get_update_in_json(self, request):
-		response = requests.get(request + "getUpdates", proxies=Config.PROXIES)
+		params = {'timeout': Config.TIMEOUT, 'offset': Config.OFFSET}
+		response = requests.get(request + "getUpdates", proxies=Config.PROXIES, data=params)
 		return response.json()
 
 	#get only last update
@@ -52,4 +53,7 @@ def main():
 
 
 if __name__ == '__main__':
-	main()
+	try:
+		main()
+	except KeyboardInterrupt:
+		exit()
